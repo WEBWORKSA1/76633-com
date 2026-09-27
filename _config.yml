@@ -1,0 +1,16 @@
+# 76633.com — GitHub Pages (Jekyll) configuration
+title: 76633.com
+description: Angel number meanings and free numerology calculators.
+# While hosted at webworksa1.github.io/76633-com:
+url: "https://webworksa1.github.io"
+baseurl: "/76633-com"
+# When the custom domain 76633.com points here, change to:
+#   url: "https://76633.com"
+#   baseurl: ""
+# and add a CNAME file containing: 76633.com
+plugins:
+  - jekyll-sitemap
+exclude: [build, docs, dist, site, node_modules, README.md, package.json, package-lock.json, LICENSE]
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }

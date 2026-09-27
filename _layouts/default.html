@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ page.title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta property="og:type" content="{{ page.og_type | default: "website" }}"><meta property="og:site_name" content="76633.com"><meta property="og:title" content="{{ page.title | escape }}"><meta property="og:description" content="{{ page.description | escape }}"><meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}"><meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b1a">{% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
+<link rel="icon" href="{{ site.baseurl }}/assets/img/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/icon-192.png"><link rel="manifest" href="{{ site.baseurl }}/manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+
+</head>
+<body data-root="{{ site.baseurl }}/">
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><a href="https://web.works/contact" target="_blank" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership</a></div>
+<header class="hdr"><div class="wrap">
+<a class="logo" href="{{ site.baseurl }}/" aria-label="76633.com home"><b>7·6</b><span>76633<span class="muted" style="font-weight:600">.com</span></span></a>
+<button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button>
+<nav class="nav" id="nav" aria-label="Main"><a href="{{ site.baseurl }}/angel-numbers/"{% if page.url contains '/angel-numbers/' %} aria-current="page"{% endif %}>Angel Numbers</a><a href="{{ site.baseurl }}/numerology/"{% if page.url contains '/numerology/' %} aria-current="page"{% endif %}>Numerology</a><a href="{{ site.baseurl }}/tools/"{% if page.url contains '/tools/' %} aria-current="page"{% endif %}>Free Tools</a><a href="{{ site.baseurl }}/videos/"{% if page.url contains '/videos/' %} aria-current="page"{% endif %}>Videos</a><a href="{{ site.baseurl }}/contests/"{% if page.url contains '/contests/' %} aria-current="page"{% endif %}>Contests</a><a href="{{ site.baseurl }}/support/"{% if page.url contains '/support/' %} aria-current="page"{% endif %}>Support</a><a class="cta" href="{{ site.baseurl }}/free-reading/">Free Reading</a><button class="icon-btn" id="themeBtn" aria-label="Toggle light/dark theme">◐</button></nav>
+</div></header>
+<main id="main">
+{{ content }}
+</main>
+{% unless page.no_newsletter %}<section class="sec-sm"><div class="wrap"><div class="lead-box"><div class="grid g2" style="align-items:center">
+<div><span class="eyebrow">Free · weekly</span><h2 class="mb0">Get your numbers in your inbox</h2><p class="muted">Weekly number forecast, new angel number guides and contest alerts. One email a week, unsubscribe anytime.</p></div>
+<form data-form="newsletter" data-ok="You're in! Watch your inbox for your first forecast.">
+<div class="row"><div class="field"><label for="nl-e">Email</label><input id="nl-e" name="email" type="email" required placeholder="you@example.com" autocomplete="email"></div>
+<div class="field"><label for="nl-d">Birth date <span class="muted">(optional)</span></label><input id="nl-d" name="birth_date" type="date"></div></div>
+<input class="hp" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn btn-gold btn-block" type="submit">Send me my weekly numbers</button>
+<p class="small muted" style="margin:8px 0 0">No spam. See our <a href="{{ site.baseurl }}/privacy/">privacy policy</a>.</p></form>
+</div></div></div></section>{% endunless %}
+<footer><div class="wrap"><div class="fgrid">
+<div><a class="logo" href="{{ site.baseurl }}/"><b>7·6</b><span>76633.com</span></a><p class="muted small mt">Decode the numbers you keep seeing. Free angel number meanings, numerology calculators and lucky-number tools — built for curiosity and self-reflection.</p>
+<a class="btn btn-ghost" href="{{ site.baseurl }}/support/">♥ Support 76633.com</a></div>
+<div><h4>Explore</h4><a href="{{ site.baseurl }}/angel-numbers/">Angel numbers A–Z</a><a href="{{ site.baseurl }}/numerology/">Numerology guide</a><a href="{{ site.baseurl }}/life-path/">Life path numbers</a><a href="{{ site.baseurl }}/chinese-lucky-numbers/">Chinese lucky numbers</a><a href="{{ site.baseurl }}/mirror-hours/">Mirror hours</a><a href="{{ site.baseurl }}/meaning-of-76633/">Meaning of 76633</a></div>
+<div><h4>Free tools</h4><a href="{{ site.baseurl }}/tools/life-path-calculator/">Life path calculator</a><a href="{{ site.baseurl }}/tools/name-numerology/">Name numerology</a><a href="{{ site.baseurl }}/tools/compatibility/">Compatibility</a><a href="{{ site.baseurl }}/tools/mobile-number-numerology/">Mobile number</a><a href="{{ site.baseurl }}/tools/vehicle-number-numerology/">Vehicle number</a><a href="{{ site.baseurl }}/tools/">All tools →</a></div>
+<div><h4>Community</h4><a href="{{ site.baseurl }}/free-reading/">Free reading</a><a href="{{ site.baseurl }}/consult/">Book a consultation</a><a href="{{ site.baseurl }}/videos/">Videos</a><a href="{{ site.baseurl }}/contests/">Contests & prizes</a><a href="{{ site.baseurl }}/careers/">Careers & talent</a><a href="{{ site.baseurl }}/partners/">Partner with us</a></div>
+<div><h4>Company</h4><a href="{{ site.baseurl }}/about/">About</a><a href="{{ site.baseurl }}/advertise/">Advertise & sponsor</a><a href="{{ site.baseurl }}/contact/">Contact</a><a href="{{ site.baseurl }}/faq/">FAQ</a><a href="{{ site.baseurl }}/privacy/">Privacy</a><a href="{{ site.baseurl }}/terms/">Terms</a><a href="{{ site.baseurl }}/disclaimer/">Disclaimer</a><a href="{{ site.baseurl }}/trademark-copyright/">Trademark & copyright</a></div>
+</div>
+<div class="legal"><p><b>Disclaimer:</b> Content on 76633.com is for entertainment, education and self-reflection only. It is not medical, legal, financial or psychological advice.</p>
+<p><b>Trademark & copyright notice:</b> “76633” is used here only as a domain name and numeric identifier. 76633.com is an independent publication and is not affiliated with, endorsed by or connected to any company, SMS short code, product, service or trademark holder that uses the number 76633. All third-party names and marks belong to their respective owners. Original content © <span data-year>2026</span> 76633.com. All rights reserved. <a href="{{ site.baseurl }}/trademark-copyright/">Full disclosure</a>.</p></div>
+</div></footer>
+<div class="consent" id="consent" role="dialog" aria-label="Cookie consent"><b>Cookies & ads</b><p class="small muted mb0">We use cookies for analytics and to show ads that keep every tool free. Choose “Accept all” for personalised ads or “Essential only” for non-personalised ads. <a href="{{ site.baseurl }}/privacy/">Privacy policy</a>.</p><div class="btns"><button class="btn btn-gold" data-consent="all">Accept all</button><button class="btn btn-ghost" data-consent="essential">Essential only</button></div></div>
+{% if page.sticky %}<div class="sticky-cta"><a class="btn btn-gold" href="{{ site.baseurl }}/free-reading/">✦ Get my free numerology reading</a></div>{% endif %}
+<script src="{{ site.baseurl }}/assets/js/config.js"></script>
+<script type="module" src="{{ site.baseurl }}/assets/js/app.js"></script>
+</body></html>
