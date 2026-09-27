@@ -125,7 +125,7 @@ export function reduce(n, keepMaster = true) {
   while (n > 9 && !(keepMaster && (n === 11 || n === 22 || n === 33))) n = digitSum(n);
   return n;
 }
-export function trail(n) { const t = [n]; while (n > 9) { n = digitSum(n); t.push(n); } return t.join(' → '); }
+export function trail(n) { const t = [n]; while (n > 9 && n !== 11 && n !== 22 && n !== 33) { n = digitSum(n); t.push(n); } return t.join(' → '); }
 
 export function lifePath(iso) {
   const [y, m, d] = iso.split('-').map(Number);
@@ -245,7 +245,7 @@ export function report(raw) {
   const order = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || s.indexOf(a) - s.indexOf(b));
   const lead = +order[0];
   const total = digitSum(s);
-  const root = reduce(total);
+  const root = [11, 22, 33].includes(+s) ? +s : reduce(total); // 11, 22, 33 are master numbers in their own right
   const rootD = D[root] || D[reduce(root, false)];
   const rootBase = D[reduce(root, false)];
   const p = pattern(s);
@@ -281,7 +281,7 @@ export function report(raw) {
     [`What does ${s} mean?`, tldr],
     [`Is ${s} a good or bad number?`, `Neither. ${s} carries ${kwList} energy. The only “warning” side is ${L.warn.charAt(0).toLowerCase() + L.warn.slice(1)}`],
     [`What does ${s} mean in love?`, rootBase.love],
-    [`What is the root number of ${s}?`, `Add the digits: ${s.split('').join(' + ')} = ${total}${total > 9 ? `, then ${trail(total)}` : ''}. Root: ${root}.`],
+    [`What is the root number of ${s}?`, `Add the digits: ${s.split('').join(' + ')} = ${total}${trail(total).includes('→') ? `, then ${trail(total)}` : ''}${root > 9 && root !== reduce(total) ? `, but ${s} is itself a master number, so it is kept whole` : ''}. Root: ${root}.`],
     [`What should I do when I see ${s}?`, actions.slice(0, 2).join(' ')]
   ];
 
