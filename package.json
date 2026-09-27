@@ -1,0 +1,12 @@
+{
+  "name": "76633-com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "76633.com — angel number meanings & numerology tools (static, GitHub Pages)",
+  "scripts": {
+    "preview": "node build/build.mjs",
+    "pages": "JEKYLL=1 SITE_URL='{{ site.url }}{{ site.baseurl }}' node build/build.mjs && cp -r site/. ."
+  },
+  "license": "UNLICENSED"
+}
